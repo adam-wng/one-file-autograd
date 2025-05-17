@@ -1,7 +1,7 @@
 # one-file-autograd
 A single file implementing a working autogradient completely in C++ with only standard headers. The autogradient tree supports every theoretically possible graph of a model, including ones with multiple inputs, outputs, bifircations, and multiple passes over the same weights. Also allows for easy user customization of model using a ```.add()``` function. 
 
-Mostly just for shits and giggles.
+Mostly just for fun.
 
 ## The idea
 Each operation is specified as a ```Module``` class. When a module is added to a ```Tree``` object, it gets wrapped in a ```GradBlock``` object and the tree updates the linking information. Finally, ```.compile()``` traverses through the linking information to produce a valid order of execution.
